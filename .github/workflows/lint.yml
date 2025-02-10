@@ -3,7 +3,7 @@ name: Lint
 on: pull_request
 
 jobs:
-  cache-and-install:
+  install-and-lint:
     runs-on: ubuntu-latest
 
     steps:
