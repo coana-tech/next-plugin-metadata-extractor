@@ -1,5 +1,5 @@
 {
-  "name": "@coana/next-plugin-metadata-extractor",
+  "name": "@coana-tech/next-plugin-metadata-extractor",
   "version": "0.1.0",
   "description": "Next.js plugin to automatically extract metadata from pages",
   "main": "lib/plugin.js",
