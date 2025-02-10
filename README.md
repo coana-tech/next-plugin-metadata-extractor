@@ -116,7 +116,7 @@ const nextConfig = {
     isServer && config.plugins.push(new MetadataCollectorPlugin(
       { 
         dev, 
-        outputPath: 'src/actions/metadata.json', 
+        outputPath: 'src/actions/metadata.json', // <-- output path
       }
     ));
     return config;
