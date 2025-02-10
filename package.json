@@ -1,7 +1,7 @@
 {
-  "name": "@coana/next-plugin-metadata-collector",
+  "name": "@coana-tech/next-plugin-metadata-extractor",
   "version": "0.1.0",
-  "description": "Next.js plugin to automatically collect metadata from pages",
+  "description": "Next.js plugin to automatically extract metadata from pages",
   "main": "lib/plugin.js",
   "types": "lib/plugin.d.ts",
   "files": [
@@ -10,6 +10,7 @@
   "scripts": {
     "test": "vitest --run",
     "lint": "eslint",
+    "ci": "pnpm run lint && pnpm run test",
     "prepare": "npm run build",
     "build": "tsc"
   },
@@ -22,6 +23,10 @@
   ],
   "author": "Coana",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coana-tech/next-plugin-metadata-extractor.git"
+  },
   "peerDependencies": {
     "next": ">=14.0.0"
   },

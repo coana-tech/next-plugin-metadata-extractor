@@ -1,17 +1,18 @@
-# @coana/next-plugin-metadata-collector
+# @coana-tech/next-plugin-metadata-extractor
 
-A Next.js plugin that automatically collects page metadata to a JSON file for site-wide search functionality.
+A Next.js plugin that automatically extracts page metadata to a JSON file for site-wide search functionality.
 
 ## Features
 
-- Automatically collects metadata from Next.js pages during development and build
+- Automatically collects static metadata from Next.js pages during development and build
 - Updates metadata in real-time during development
 - TypeScript support
 - Zero configuration required
 
-## Metadata Example
+## Example Metadata Output
 
 ```json
+// metadata.json
 [
   {
     "pathname": "/home",
@@ -34,11 +35,11 @@ A Next.js plugin that automatically collects page metadata to a JSON file for si
 ## Installation
 
 ```bash
-npm install @coana/next-plugin-metadata-collector
+npm install @coana-tech/next-plugin-metadata-extractor
 # or
-pnpm add @coana/next-plugin-metadata-collector
+pnpm add @coana-tech/next-plugin-metadata-extractor
 # or
-yarn add @coana/next-plugin-metadata-collector
+yarn add @coana-tech/next-plugin-metadata-extractor
 ```
 
 ## Usage
@@ -46,7 +47,8 @@ yarn add @coana/next-plugin-metadata-collector
 1. Add the plugin to your `next.config.js`:
 
 ```js
-const { MetadataCollectorPlugin } = require('@coana/next-plugin-metadata-collector');
+// next.config.js
+const { MetadataCollectorPlugin } = require('@coana-tech/next-plugin-metadata-extractor');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -61,11 +63,35 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-2. Fetch the `metadata.json` file from the `public` directory:
+2. Define static metadata in your pages:
 
 ```tsx
+// app/page.tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "My Page",
+  description: "My Page Description",
+};
+```
+
+See the [Next.js documentation](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) for more information about defining metadata.
+
+**NOTE:** The plugin does not support dynamically computed metadata.
+
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Fetch the `metadata.json` file from the `public` directory:
+
+```tsx
+// app/components/Metadata.tsx
 import { useState, useEffect } from 'react';
-import type { PageMetadata } from '@coana/next-plugin-metadata-collector';
+import type { PageMetadata } from '@coana-tech/next-plugin-metadata-extractor';
 
 function Component() {
   const [metadata, setMetadata] = useState<PageMetadata[]>([]);
@@ -143,7 +169,7 @@ You can enhance the search functionality with fuzzy matching using libraries lik
 
 ```typescript
 import Fuse from 'fuse.js';
-import type { PageMetadata } from '@coana/next-plugin-metadata-collector';
+import type { PageMetadata } from '@coana-tech/next-plugin-metadata-extractor';
 
 function FuzzySearch() {
   const [fuse, setFuse] = useState<Fuse<PageMetadata> | null>(null);
