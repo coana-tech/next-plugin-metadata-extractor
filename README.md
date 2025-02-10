@@ -36,6 +36,8 @@ A Next.js plugin that automatically collects page metadata to a JSON file for si
 ```bash
 npm install @coana/next-plugin-metadata-collector
 # or
+pnpm add @coana/next-plugin-metadata-collector
+# or
 yarn add @coana/next-plugin-metadata-collector
 ```
 
