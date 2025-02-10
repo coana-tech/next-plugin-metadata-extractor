@@ -10,6 +10,7 @@
   "scripts": {
     "test": "vitest --run",
     "lint": "eslint",
+    "ci": "pnpm run lint && pnpm run test",
     "prepare": "npm run build",
     "build": "tsc"
   },
