@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
 
       - name: Lint & Test
-        run: pnpm ci
+        run: pnpm run ci
 
       - name: Publish
         run: pnpm publish --provenance --access public --dry-run
