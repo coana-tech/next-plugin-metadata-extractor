@@ -1,7 +1,7 @@
 {
-  "name": "@coana/next-plugin-metadata-collector",
+  "name": "@coana/next-plugin-metadata-extractor",
   "version": "0.1.0",
-  "description": "Next.js plugin to automatically collect metadata from pages",
+  "description": "Next.js plugin to automatically extract metadata from pages",
   "main": "lib/plugin.js",
   "types": "lib/plugin.d.ts",
   "files": [
