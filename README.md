@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 
 See the [Next.js documentation](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) for more information about defining metadata.
 
-**NOTE:** The plugin does not support dynamic metadata.
+**NOTE:** The plugin does not support dynamically computed metadata.
 
 
 3. Start the development server:
