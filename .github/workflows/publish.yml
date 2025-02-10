@@ -40,6 +40,6 @@ jobs:
         run: pnpm run ci
 
       - name: Publish
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
