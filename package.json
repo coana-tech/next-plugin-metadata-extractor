@@ -22,6 +22,10 @@
   ],
   "author": "Coana",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coana-tech/next-plugin-metadata-extractor.git"
+  },
   "peerDependencies": {
     "next": ">=14.0.0"
   },
