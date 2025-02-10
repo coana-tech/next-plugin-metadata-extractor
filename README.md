@@ -1,4 +1,4 @@
-# @coana/next-plugin-metadata-extractor
+# @coana-tech/next-plugin-metadata-extractor
 
 A Next.js plugin that automatically extracts page metadata to a JSON file for site-wide search functionality.
 
@@ -35,11 +35,11 @@ A Next.js plugin that automatically extracts page metadata to a JSON file for si
 ## Installation
 
 ```bash
-npm install @coana/next-plugin-metadata-collector
+npm install @coana-tech/next-plugin-metadata-extractor
 # or
-pnpm add @coana/next-plugin-metadata-collector
+pnpm add @coana-tech/next-plugin-metadata-extractor
 # or
-yarn add @coana/next-plugin-metadata-collector
+yarn add @coana-tech/next-plugin-metadata-extractor
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ yarn add @coana/next-plugin-metadata-collector
 
 ```js
 // next.config.js
-const { MetadataCollectorPlugin } = require('@coana/next-plugin-metadata-collector');
+const { MetadataCollectorPlugin } = require('@coana-tech/next-plugin-metadata-extractor');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -91,7 +91,7 @@ npm run dev
 ```tsx
 // app/components/Metadata.tsx
 import { useState, useEffect } from 'react';
-import type { PageMetadata } from '@coana/next-plugin-metadata-collector';
+import type { PageMetadata } from '@coana-tech/next-plugin-metadata-extractor';
 
 function Component() {
   const [metadata, setMetadata] = useState<PageMetadata[]>([]);
@@ -169,7 +169,7 @@ You can enhance the search functionality with fuzzy matching using libraries lik
 
 ```typescript
 import Fuse from 'fuse.js';
-import type { PageMetadata } from '@coana/next-plugin-metadata-collector';
+import type { PageMetadata } from '@coana-tech/next-plugin-metadata-extractor';
 
 function FuzzySearch() {
   const [fuse, setFuse] = useState<Fuse<PageMetadata> | null>(null);
