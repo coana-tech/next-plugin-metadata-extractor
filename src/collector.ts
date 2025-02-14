@@ -97,10 +97,11 @@ export async function collectMetadata(
   const pageFiles = await fg(files, {
     cwd: pagesDirectory,
   });
+  const sortedPageFiles = pageFiles.sort();
 
   const metadataCollection: PageMetadata[] = [];
 
-  for (const pageFile of pageFiles) {
+  for (const pageFile of sortedPageFiles) {
     try {
       const fullPath = path.join(pagesDirectory, pageFile);
       const fileContent = await fs.promises.readFile(fullPath, "utf-8");
