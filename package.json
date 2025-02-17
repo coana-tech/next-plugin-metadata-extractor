@@ -1,6 +1,6 @@
 {
   "name": "@coana-tech/next-plugin-metadata-extractor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Next.js plugin to automatically extract metadata from pages",
   "main": "lib/plugin.js",
   "types": "lib/plugin.d.ts",
@@ -31,23 +31,23 @@
     "next": ">=14.0.0"
   },
   "dependencies": {
-    "@babel/parser": "^7.26.8",
-    "@babel/traverse": "^7.26.8",
-    "@babel/types": "^7.26.8",
+    "@babel/parser": "^7.26.9",
+    "@babel/traverse": "^7.26.9",
+    "@babel/types": "^7.26.9",
     "fast-glob": "^3.3.3",
     "object-hash": "^3.0.0"
   },
   "devDependencies": {
     "@types/babel__traverse": "^7.20.6",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@types/object-hash": "^3.0.6",
     "@types/webpack": "^5.28.5",
-    "@typescript-eslint/eslint-plugin": "^8.23.0",
-    "@typescript-eslint/parser": "^8.23.0",
-    "eslint": "^9.20.0",
-    "globals": "^15.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.23.0",
+    "typescript-eslint": "^8.24.0",
     "vitest": "^3.0.5"
   }
 }
